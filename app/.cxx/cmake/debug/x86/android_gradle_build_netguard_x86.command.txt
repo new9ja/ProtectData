@@ -1,0 +1,7 @@
+Executable : C:\Users\SarahWhite\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+C:\Users\SarahWhite\AndroidStudioProjects\ProData\app\.cxx\cmake\debug\x86
+netguard
+jvmArgs : 
+

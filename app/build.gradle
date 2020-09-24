@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion = 30
+
+    defaultConfig {
+        applicationId = "com.baconpoints.procdata"
+        versionName = "2.285"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode = 2020071701
+        archivesBaseName = "NetGuard-v$versionName"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                arguments "-DANDROID_PLATFORM=android-22"
+                // https://developer.android.com/ndk/guides/cmake.html
+            }
+        }
+
+        //ndkVersion "21.0.6113669"
+        ndk {
+            // https://developer.android.com/ndk/guides/abis.html#sa
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            useProguard = true
+            proguardFiles.add(file('proguard-rules.pro'))
+
+            buildConfigField "boolean", "PLAY_STORE_RELEASE", "false"
+            buildConfigField "String", "HOSTS_FILE_URI", "\"https://www.netguard.me/hosts\""
+            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/M66B/NetGuard/releases/latest\""
+        }
+        play {
+            minifyEnabled = true
+            useProguard = true
+            
+            proguardFiles.add(file('proguard-rules.pro'))
+            buildConfigField "boolean", "PLAY_STORE_RELEASE", "true"
+            buildConfigField "String", "HOSTS_FILE_URI", "\"\""
+            buildConfigField "String", "GITHUB_LATEST_API", "\"\""
+        }
+        debug {
+            minifyEnabled = true
+            useProguard = true
+            proguardFiles.add(file('proguard-rules.pro'))
+            buildConfigField "boolean", "PLAY_STORE_RELEASE", "false"
+            buildConfigField "String", "HOSTS_FILE_URI", "\"https://www.netguard.me/hosts\""
+            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/M66B/NetGuard/releases/latest\""
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // https://developer.android.com/jetpack/androidx/releases/
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+
+    // https://bumptech.github.io/glide/
+    implementation('com.github.bumptech.glide:glide:4.10.0') {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+}

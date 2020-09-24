@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- https://www.materialpalette.com/teal/deep-orange -->
+
+    <color name="colorTealPrimary">#1550CF</color>
+    <color name="colorTealPrimaryDark">#003F5C</color>
+    <color name="colorTealAccent">#CF1313</color>
+    <color name="colorTealOn">#1550CF</color>
+    <color name="colorTealOff">#CF1313</color>
+
+    <color name="colorBluePrimary">#111b1E</color>
+    <color name="colorBluePrimaryDark">#01377D</color>
+    <color name="colorBlueAccent">#7BC2F6</color>
+    <color name="colorBlueOn">#2C4A50</color>
+    <color name="colorBlueOff">#341130</color>
+
+    <color name="colorPurplePrimary">#BB9847</color>
+    <color name="colorPurplePrimaryDark">#B78727</color>
+    <color name="colorPurpleAccent">#000428</color>
+    <color name="colorPurpleOn">#B06AB3</color>
+    <color name="colorPurpleOff">#43CEA2</color>
+
+    <color name="colorAmberPrimary">#B78727</color>
+    <color name="colorAmberPrimaryDark">#B8860B</color>
+    <color name="colorAmberAccent">#000428</color>
+    <color name="colorAmberOn">#0D5901</color>
+    <color name="colorAmberOff">#8A0303</color>
+
+    <color name="colorOrangePrimary">#F56FA1</color>
+    <color name="colorOrangePrimaryDark">#CB6072</color>
+    <color name="colorOrangeAccent">#1D5A2B</color>
+    <color name="colorOrangeOn">#E24C2C</color>
+    <color name="colorOrangeOff">#7C5E4F</color>
+
+    <color name="colorGreenPrimary">#A22EAD</color>
+    <color name="colorGreenPrimaryDark">#D3B7CC</color>
+    <color name="colorGreenAccent">#101629</color>
+    <color name="colorGreenOn">#265D23</color>
+    <color name="colorGreenOff">#C69E5D</color>
+
+    <color name="colorSend">#FF0000</color>
+    <color name="colorReceive">#0000FF</color>
+
+    <color name="colorGrayed">#AAAAAA</color>
+</resources>

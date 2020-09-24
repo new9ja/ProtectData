@@ -1,0 +1,29 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:shortcutDisabledMessage="@string/menu_settings"
+        android:shortcutId="settings"
+        android:shortcutLongLabel="@string/menu_settings"
+        android:shortcutShortLabel="@string/menu_settings">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.baconpoints.procdata.ActivitySettings"
+            android:targetPackage="com.baconpoints.procdata" />
+        <categories android:name="android.shortcut.settings" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:shortcutDisabledMessage="@string/menu_log"
+        android:shortcutId="log"
+        android:shortcutLongLabel="@string/menu_log"
+        android:shortcutShortLabel="@string/menu_log">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.baconpoints.procdata.ActivityLog"
+            android:targetPackage="com.baconpoints.procdata" />
+        <categories android:name="android.shortcut.log" />
+    </shortcut>
+</shortcuts>
+

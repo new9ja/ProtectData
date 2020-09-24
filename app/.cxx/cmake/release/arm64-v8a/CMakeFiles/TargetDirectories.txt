@@ -1,0 +1,3 @@
+C:/Users/SarahWhite/AndroidStudioProjects/ProData/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/SarahWhite/AndroidStudioProjects/ProData/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/netguard.dir
+C:/Users/SarahWhite/AndroidStudioProjects/ProData/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
